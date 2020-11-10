@@ -13,13 +13,12 @@
         </div>
         {% endfor %}
 
-
-
-        {% childnav key="solutions","pageSize"=10,"typeId"="tWf0Xsvjg" %}
+        {% set solutionId = "oH5eGKwcI" %}
+        {% childnav key="solutions","pageSize"=10,"typeId"=solutionId %}
         <div class="main-container">
             <div class="nav">
                 {% for cateItem in solutions.cates %}
-                {% if cateItem.parentId == 'tWf0Xsvjg' %}
+                {% if cateItem.parentId == solutionId %}
                 <div class="nav-item">
                     <span :data-key='key' class="selected">
                         {{cateItem.name}}
@@ -29,8 +28,9 @@
                 {% endfor %}
             </div>
 
+            <!-- 农业互联网解决方案 -->
             <div class="content">
-                {% set itemid = "p-nXoG2ob" %}
+                {% set itemid = "9Cdvb37im" %}
                 {% news key="theposts","pageSize"=10,"typeId"=itemid %}
                 {% for item in theposts %}
                 <div class="content-item">
@@ -39,8 +39,8 @@
                     </div>
                     <div class="text">
                         <h3>{{item.stitle}}</h3>
-                        <p>{{item.discription | dump}}</p>
-                        <a class="more" href="">MORE+</a>
+                        <p>{{item.discription | cutwords(80)}}</p>
+                        <a class="more" href="{{item.url}}">MORE+</a>
                     </div>
                 </div>
                 {% endfor %}

@@ -37,14 +37,28 @@
 
         <div class="nav">
             <nav>
-
-                {% for cate in navigation %}
-                {% if cate.parentId == '0' %}
-                <div role="presentation">
-                    <a class="nav-link" role="menuitem" tabindex="-1" alt="{{site.altkey}}{{cate.name}}"
-                        href="{{cate.url}}">{{cate.name}}</a>
-                </div>
-                {% endif %} {% endfor %}
+                <li role="presentation">
+                    <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="{{homelink}}">首页</a>
+                </li>
+                <li role="presentation">
+                    <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/page/product.html">产品中心</a>
+                </li>
+                <li role="presentation">
+                    <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/page/solution.html">解决方案</a>
+                </li>
+                <!-- <li role="presentation">
+                                                    <a class="nav-link" role="menuitem" tabindex="-1" alt=""
+                                                        href="/page/service.html">飞行服务</a>
+                                                </li> -->
+                <li role="presentation">
+                    <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/page/about.html">公司简介</a>
+                </li>
+                <li role="presentation">
+                    <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/news/company___aZBV4cSEn">新闻动态</a>
+                </li>
+                <li role="presentation">
+                    <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/page/contact.html">联系我们</a>
+                </li>
             </nav>
             <div class="beian">
                 <p>Copyright © 北京天航华创科技股份有限公司 <br> Tianhang Create technology Co. Ltd. 2017</p>

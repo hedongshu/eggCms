@@ -36,9 +36,11 @@ item为子元素集合
                     </a>
                 </h2>
                 <div class="post-content ">
-                    {% if targetSearchKey %} {{item.discription | cutwords(200) | hightWords(targetSearchKey) | safe }}
-                    {% else %} {{item.discription
-					| cutwords(200)}} {% endif %}
+                    {% if targetSearchKey %}
+                    {{item.discription | cutwords(200) | hightWords(targetSearchKey) | safe }}
+                    {% else %}
+                    {{item.discription | cutwords(200)}}
+                    {% endif %}
                 </div>
             </div>
         </div>

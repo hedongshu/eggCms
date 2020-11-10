@@ -20,7 +20,7 @@ module.exports = appInfo => {
             // 'systemOptionLog',
             // 'announce',
             // 'systemNotify',
-            'ads',
+            // 'ads',
             // 'contentTemp',
             // 'templateConfig',
             // 'versionManage',
@@ -40,7 +40,7 @@ module.exports = appInfo => {
         // DEV_CONFIG_MODULES_END
         mongoose: {
             client: {
-                url: "mongodb://127.0.0.1:27017/doracms2",
+                url: "mongodb://127.0.0.1:27017/newsite",
                 options: {
                     useCreateIndex: true,
                     useUnifiedTopology: true,

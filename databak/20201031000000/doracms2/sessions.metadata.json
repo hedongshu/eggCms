@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"doracms2.sessions"},{"v":2,"key":{"expires":1},"name":"expires_1","ns":"doracms2.sessions","expireAfterSeconds":0}],"uuid":"f7c2f8fa475647349173868260b28acc"}

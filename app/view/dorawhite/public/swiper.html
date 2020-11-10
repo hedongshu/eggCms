@@ -8,8 +8,12 @@
         {% for item in targetAds.items %}
         {% set imgItemStyle = 'background-image:url('+item.sImg + ')'%}
         <div class="swiper-slide" style='{{imgItemStyle}}'>
-            <div>
-                <span>{{item.title | dump}}</span>
+            <div class="banner-info">
+                <h3>{{item.title}}</h3>
+                <p>{{item.alt}}</p>
+                <a href="{{item.link}}" target="_blank">
+                    <button>查看详情 ></button>
+                </a>
             </div>
         </div>
         {% endfor %}
@@ -31,13 +35,14 @@
 <script>
 
     var mySwiper = new Swiper('.swiper-container', {
-        direction: 'horizontal', // 垂直切换选项
+        direction: 'horizontal',
         loop: true, // 循环模式选项
 
         // 如果需要分页器
         // pagination: {
         //     el: '.swiper-pagination',
         // },
+        autoplay: true,
 
         // 如果需要前进后退按钮
         navigation: {
@@ -50,6 +55,17 @@
         //     el: '.swiper-scrollbar',
         // },
     })
+
+    //鼠标覆盖停止自动切换
+    mySwiper.el.onmouseover = function () {
+        mySwiper.autoplay.stop();
+    }
+
+    //鼠标离开开始自动切换
+    mySwiper.el.onmouseout = function () {
+        mySwiper.autoplay.start();
+    }
+
 </script>
 
 {% endmacro%}

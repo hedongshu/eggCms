@@ -9,7 +9,7 @@ module.exports = appInfo => {
         // 数据库连接
         mongoose: {
             client: {
-                url: 'mongodb://doramart:doramart@127.0.0.1:27017/doracms2',
+                url: 'mongodb://doramart:doramart@127.0.0.1:27017/newsite',
                 options: {
                     useCreateIndex: true,
                     useUnifiedTopology: true,
