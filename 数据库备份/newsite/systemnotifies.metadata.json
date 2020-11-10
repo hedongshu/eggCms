@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"newsite.systemnotifies"},{"v":2,"key":{"date":-1},"name":"date_-1","background":true,"ns":"newsite.systemnotifies"}],"uuid":"625af8afa8ac49eb8a9b75b7227be1ae"}

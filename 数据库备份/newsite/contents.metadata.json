@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"newsite.contents"},{"v":2,"key":{"state":1,"uAuthor":1},"name":"state_1_uAuthor_1","ns":"newsite.contents","background":true}],"uuid":"d9fc3006af554275a4878f366e599cd1"}
