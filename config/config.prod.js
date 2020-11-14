@@ -9,8 +9,11 @@ module.exports = appInfo => {
         // 数据库连接
         mongoose: {
             client: {
-                url: 'mongodb://doramart:doramart@127.0.0.1:27017/newsite',
+                url: 'mongodb://127.0.0.1:27017/newsite',
                 options: {
+                    auth: { authSource: "admin" },
+                    user: 'root',
+                    pass: 'hds1512',
                     useCreateIndex: true,
                     useUnifiedTopology: true,
                     keepAlive: 3000
@@ -19,22 +22,22 @@ module.exports = appInfo => {
         },
         // mongodb相关路径
         mongodb: {
-            binPath: '/usr/local/mongodb/mongodb-linux-x86_64-ubuntu1604-4.0.0/bin/',
-            backUpPath: '/home/database/doracms/'
+            binPath: '/usr/bin/',
+            backUpPath: path.join(appInfo.baseDir, 'databak/')  //备份地址
         },
         // 静态目录
         static: {
             prefix: '/static',
-            dir: [path.join(appInfo.baseDir, 'app/public'), path.join(appInfo.baseDir, 'backstage/dist'), '/home/doraData/uploadFiles/static'],
+            dir: [path.join(appInfo.baseDir, 'app/public'), path.join(appInfo.baseDir, 'backstage/dist')],
             maxAge: 31536000,
         },
         // 日志路径
         logger: {
-            dir: '/home/ubuntu/logsdir/doracms',
+            dir: path.join(appInfo.baseDir, 'logs'),
         },
         // 服务地址配置
-        server_path: 'http://www.7hds.com/cms',
-        server_api: 'http://www.7hds.com/api',
+        server_path: 'http://106.55.43.96:8080',
+        server_api: 'http://106.55.43.96:8080/api',
 
     }
 };

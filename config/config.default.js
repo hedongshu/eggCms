@@ -20,12 +20,12 @@ module.exports = appInfo => {
 
     return {
 
-        keys: 'doracms2',
+        keys: 'eggcms',
 
         cluster: {
             listen: {
-        port: 8080,
-                hostname: '',
+                port: 8080,
+                hostname: '0.0.0.0',
             }
         },
 
@@ -77,9 +77,9 @@ module.exports = appInfo => {
 
 
         // cdn域名
-        origin: 'https://cdn.html-js.cn',
+        origin: '',
         // 系统服务提供商
-        doracms_api: 'https://api.html-js.cn',
+        doracms_api: 'http://106.55.43.96:8080/api',
         // 模板文件目录
         temp_static_forder: process.cwd() + '/app/public/themes/',
         temp_view_forder: process.cwd() + '/app/view/',
