@@ -1507,7 +1507,7 @@ header {
     display: none;
         position: relative;
     font-size: 14px;
-    margin-top: 80px;
+    margin-top: 40px;
     text-align: center;
     padding: 10px 0;
         background: rgba(66,106,114,.64);
@@ -1515,7 +1515,8 @@ header {
     font-size: 16px;
     .or-card {
         img {
-            width: 50%;
+            width: 100px;
+            height: 100px;
         }
     }
 }
@@ -2065,6 +2066,9 @@ header {
     // 首页
     overflow: hidden;
     .home {
+        // swiper 
+        
+
         .slider-box.banner {
             .swiper-container {
                 .swiper-slide {
@@ -2073,6 +2077,22 @@ header {
                     background-repeat:no-repeat;
                     background-position:center;
                     background-size: cover;
+                }
+
+                .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+                    opacity: .1;
+                }
+                .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+                    opacity: .1;
+                }
+
+                &:hover {
+                    .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+                    opacity: 1;
+                }
+                .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+                    opacity: 1;
+                }
                 }
             }   
             .banner-info {
@@ -2086,7 +2106,6 @@ header {
                 }
                 p  {
                     font-size: 40px;
-                    
                 }
                 button {
                     display: block;
@@ -2498,7 +2517,12 @@ header {
     }
 }
 
+// 移动端适配
 @media all and (max-width: 1100px) {
+    .mainbody {
+        width: 90%;
+        margin: 10px auto 0;
+    }
     #mobile-header {
         display: block !important;
     }
@@ -2512,20 +2536,39 @@ header {
     #mobile-footer {
         display: block !important;
     }
-
     .home {
         .banner-info {
+            padding: 20px !important;
             left: 0px !important;
+            transform: translateY(-50%) !important;
             width: 100%;
             padding: 10px;
+            h3 {
+                font-size: 30px !important;
+            }
+            p {
+                font-size: 20px !important;
+            }
             a {
                 button {
-                    width: 60%;
+                    width: 60% !important;
+                    height: auto !important;
                 }
             }
         }
 
     }
+
+    .mainbody {
+        .main-container {
+            margin-top: 40px !important;
+        }
+    }
+
+    .recent-content-list .content-list .list-img img {
+        height: auto !important;
+    }
+    
 }
 
 

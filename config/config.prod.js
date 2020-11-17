@@ -29,7 +29,7 @@ module.exports = appInfo => {
         static: {
             prefix: '/static',
             dir: [path.join(appInfo.baseDir, 'app/public'), path.join(appInfo.baseDir, 'backstage/dist')],
-            maxAge: 31536000,
+            maxAge: 0,
         },
         // 日志路径
         logger: {
