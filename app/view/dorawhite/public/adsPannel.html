@@ -55,13 +55,20 @@
     </ul>
 </div>
 {% elif targetAds.items.length == 1%} {% set normalAds = targetAds.items[0] %}
-<div class="normal-img-ads">
-    <a href="{{normalAds.link}}" target="_blank">
-        <img src="{{ normalAds.sImg}}" alt="{{normalAds.title}}">
-    </a>
+<!-- 单张图片 -->
+
+<div style="
+            width:100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; 
+            background-image:url({{normalAds.sImg}})">
 </div>
+
 {% endif %}
 {% elif targetAds.type == '0' %}
+<!-- 文字链接 -->
 <div class="normal-text-ads">
     <ul>
         {% for item in targetAds.items %}

@@ -3,15 +3,21 @@
 <div>
     <div class="solution">
 
-        {% ads name="解决方案banner" %}
+        <!-- {% ads name="解决方案banner" %}
         {% for item in 解决方案banner.items %}
         {% set imgItemStyle = 'background-image:url('+item.sImg + ')'%}
-        <div class="banner" style='{{imgItemStyle}}'>
-            <div>
-                <span>{{item.title | dump}}</span>
-            </div>
+        <div class="banner" style="
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            background-size: cover; 
+                                            background-image:url({{item.sImg}})">
         </div>
-        {% endfor %}
+        {% endfor %} -->
+
+        <div class="banner" style="width: 100%; height: 65vh;">
+            {% ads name="解决方案banner" %}
+            {{adsPannel.slider(解决方案banner)}}
+        </div>
 
         {% set solutionId = "oH5eGKwcI" %}
         {% childnav key="solutions","pageSize"=10,"typeId"=solutionId %}

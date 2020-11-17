@@ -31,7 +31,13 @@
                 <div class="swiper-slide">
                     <a href="{{item.url}}" title="{{item.title}}" target="_blank">
                         <div class="pic">
-                            <img src="{{item.sImg}}" title="{{item.title}}" style="width: 100%; height: 432px;">
+                            <div class="pic-img" style="width: 100%; height: 432px;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: cover; 
+                                    background-image:url({{item.sImg}})">
+                            </div>
+                            <!-- <img src="{{item.sImg}}" title="{{item.title}}" style="width: 100%; height: 432px;"> -->
                         </div>
                     </a>
                     <div class="text1 swiper-no-swiping">

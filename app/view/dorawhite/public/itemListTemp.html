@@ -12,7 +12,7 @@ item为子元素集合
     {% endif %}
     {% for item in posts %}
     <article class="post">
-        <div class="row">
+        <div class="row" style="display: flex;">
             <div class="col-xs-5 col-sm-3 col-md-4">
                 {% if item.categories %} {% if item.categories.length > 1 %}
                 <a target="_blank" class="item-category"
@@ -22,7 +22,14 @@ item为子元素集合
                     href="{{(item.categories)[0].url}}">{{(item.categories)[0].name}}</a>
                 {% endif%} {% endif%}
                 <a href="{{item.url}} " target="_blank " class="contentImg ">
-                    <img src="{{item.sImg}} " class="img-responsive " alt="{{item.title}} " />
+                    <div class="pic-img" class="img-responsive " style="width: 100%;
+                                                        height:100%;
+                                                        background-repeat: no-repeat;
+                                                        background-position: center;
+                                                        background-size: cover; 
+                                                        background-image:url({{item.sImg}})">
+                    </div>
+                    <!-- <img src="{{item.sImg}} " class="img-responsive " alt="{{item.title}} " /> -->
                 </a>
             </div>
             <div class="col-xs-7 col-sm-9 col-md-8 discription ">
