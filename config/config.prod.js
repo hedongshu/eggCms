@@ -12,13 +12,13 @@ module.exports = appInfo => {
                 url: 'mongodb://127.0.0.1:27017/newsite',
                 options: {
                     auth: { authSource: "admin" },
-                    user: 'root',
-                    pass: 'hds1512',
+                    user: 'admin',
+                    pass: 'admin',
                     useCreateIndex: true,
                     useUnifiedTopology: true,
                     keepAlive: 3000
-                },
-            },
+                }
+            }
         },
         // mongodb相关路径
         mongodb: {
@@ -36,8 +36,8 @@ module.exports = appInfo => {
             dir: path.join(appInfo.baseDir, 'logs'),
         },
         // 服务地址配置
-        server_path: 'http://106.55.43.96:8080',
-        server_api: 'http://106.55.43.96:8080/api',
+        server_path: 'http://59.110.157.228:8080',
+        server_api: 'http://59.110.157.228:8080/api',
 
     }
 };

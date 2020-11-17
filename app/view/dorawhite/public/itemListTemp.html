@@ -45,6 +45,11 @@ item为子元素集合
             </div>
         </div>
     </article>
-    {% endfor %} {% include "./pagination.html" %}
+    {% endfor %}
+
+    {% if pageType != 'index' %}
+    {% include "./pagination.html" %}
+    {% endif %}
+
 
 </div>

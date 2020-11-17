@@ -1,16 +1,17 @@
 <!--头部模板-->
 <script>
     if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        document.write("<script src='{{staticThemePath}}/js/iscroll/iscroll.js'><" + '/' +
-            "script>");
-        $(function () {
-            new IScroll('#navWrapper', {
-                scrollX: true,
-                scrollY: false,
-                mouseWheel: true,
-                click: true
-            });
-        })
+        // document.write("<script src='{{staticThemePath}}/js/iscroll/iscroll.js'><" + '/' +
+        //     "script>");
+        // $(function () {
+        //     new IScroll('#navWrapper', {
+        //         scrollX: true,
+        //         scrollY: false,
+        //         mouseWheel: true,
+        //         click: true
+        //     });
+        // })
+
     }
 </script>
 <input type="hidden" value="{{userInfo._id}}" id="userId">
@@ -79,5 +80,49 @@
                 </div>
             </div>
         </div>
+    </div>
+</header>
+
+
+
+<header id="mobile-header">
+    <div class="site-name ">
+        <a href="{{homelink}}" id="logo">
+            <img src="{{site.logo}}" alt="{{site.title}}" />
+        </a>
+        </a>
+    </div>
+
+    <div id="navScroller">
+        <ul>
+            <li role="presentation">
+                <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="{{homelink}}">首页</a>
+            </li>
+            <li role="presentation">
+                <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/page/product.html">产品中心</a>
+            </li>
+            <li role="presentation">
+                <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/page/solution.html">解决方案</a>
+            </li>
+            <!-- <li role="presentation">
+                                            <a class="nav-link" role="menuitem" tabindex="-1" alt=""
+                                                href="/page/service.html">飞行服务</a>
+                                        </li> -->
+            <li role="presentation">
+                <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/page/about.html">公司简介</a>
+            </li>
+            <li role="presentation">
+                <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/news/company___aZBV4cSEn">新闻动态</a>
+            </li>
+            <li role="presentation">
+                <a class="nav-link" role="menuitem" tabindex="-1" alt="" href="/page/contact.html">联系我们</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="thy topNav">
+        <a href="http://thcreate.com/eason/login" target="_blank" rel="">
+            <span>天航生态云</span>
+        </a>
     </div>
 </header>

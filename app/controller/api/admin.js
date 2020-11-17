@@ -25,7 +25,7 @@ class AdminController extends Controller {
                 ctx.redirect('/admin/dashboard');
             } else {
 
-                let configs = await ctx.helper.reqJsonData('systemConfig/getConfig');
+                let configs = await ctx.helper.reqJsonData('systemConfig/getConfig'); // 发起请求systemConfig/getConfig
                 const {
                     showImgCode
                 } = configs || [];

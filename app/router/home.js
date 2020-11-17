@@ -1,3 +1,5 @@
+
+// 前端页面路由
 module.exports = app => {
     const {
         router,
@@ -17,7 +19,6 @@ module.exports = app => {
 
     router.get("/page/:current.html", controller.page.home.getDataForIndexPage);
 
-    // router.get("/page/:current.html", controller.page.home.getDataForOtherPage);
 
 
     // 内容详情入口
