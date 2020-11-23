@@ -1,0 +1,53 @@
+// 移动端适配
+@media all and (max-width: 1100px) {
+    .mainbody {
+        width: 90%;
+        margin: 10px auto 0;
+    }
+    #mobile-header {
+        display: block !important;
+    }
+    #header {
+        display: none;
+    }
+
+    #footer {
+        display: none;
+    }
+    #mobile-footer {
+        display: block !important;
+    }
+    .home {
+        .banner-info {
+            padding: 20px !important;
+            left: 0px !important;
+            transform: translateY(-50%) !important;
+            width: 100%;
+            padding: 10px;
+            h3 {
+                font-size: 30px !important;
+            }
+            p {
+                font-size: 20px !important;
+            }
+            a {
+                button {
+                    width: 60% !important;
+                    height: auto !important;
+                }
+            }
+        }
+
+    }
+
+    .mainbody {
+        .main-container {
+            margin-top: 40px !important;
+        }
+    }
+
+    .recent-content-list .content-list .list-img img {
+        height: auto !important;
+    }
+    
+}

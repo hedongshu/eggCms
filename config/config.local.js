@@ -7,6 +7,12 @@ const mongobin = isDocker ? '' : '/Users/dora/Documents/dora/softs/mongodb/bin/'
 module.exports = appInfo => {
 
     return {
+        cluster: {
+            listen: {
+                port: 8080,
+                hostname: '127.0.0.1',
+            }
+        },
         admin_root_path: 'http://localhost',
         // DEV_CONFIG_MODULES_BEGIN
         dev_modules: [

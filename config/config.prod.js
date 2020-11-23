@@ -4,6 +4,12 @@ const path = require('path')
 module.exports = appInfo => {
 
     return {
+        cluster: {
+            listen: {
+                port: 8080,
+                hostname: '0.0.0.0',
+            }
+        },
         // 插件路径
         admin_root_path: '/static',
         // 数据库连接

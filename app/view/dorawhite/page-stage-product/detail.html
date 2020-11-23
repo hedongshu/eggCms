@@ -1,0 +1,35 @@
+{% extends "../default.html" %}
+{% block content %}
+<div class="product-container">
+    <div class="row">
+        <div class="col-md-12 main-container" ms-controller="documentInfo">
+            <input type="hidden" value="{{post._id}}" id="contentId">
+            <article class="post">
+                <!-- <h2 alt="{{site.altkey}}{{post.title}}" class="post-title">
+                    {{post.title}} {% if post.from == '2' %} &nbsp;
+                    <span class="badge">{{__('lc_document_share')}}</span>
+                    {% endif %}
+                </h2>
+                <ul class="post-meta content-author">
+                    <li class="author-name">
+                        {% if post.uAuthor %} {{post.uAuthor.userName}} {% else %}
+                        {{post.author.userName}} {% endif %}
+                    </li>
+                    <li>
+                        {% set cateInfo = (post.categories[0]) %}
+                        <span class="dot">&nbsp;•&nbsp;</span>
+                        <a href="{{cateInfo.url}}"
+                            target="_blank">{{(post.categories[post.categories.length-1]).name}}</a>
+                    </li>
+                    <li>
+                        <span class="dot">&nbsp;•&nbsp;</span> {{post.date}}
+                    </li>
+                </ul> -->
+                <div class="post-content">
+                    {{post.comments | safe}}
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+// about 
+.about {
+    .main-container.mainbody {
+        margin-top: 80px;
+        .title {
+		font-size: $title1Size;
+		border-bottom: 1px solid #ccc;
+
+		span {
+			display: block;
+            font-weight: 400;
+            
+		}
+	}
+    }
+}

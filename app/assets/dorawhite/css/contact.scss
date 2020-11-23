@@ -1,0 +1,27 @@
+// contact
+.contact {
+    .content {
+		display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+		margin: 80px auto;
+
+		.item {
+			text-align: center;
+            width: 30%;
+            min-width: 300px;
+			color: #666666;
+
+			.icon {
+				font-size: 30px;
+				line-height: 30px;
+			}
+		}
+
+		.info {
+			font-size: 20px;
+			font-weight: 400;
+			color: $themeColor;
+		}
+	}
+}

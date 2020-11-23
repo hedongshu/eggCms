@@ -1,0 +1,120 @@
+
+// solution
+.solution {
+    .banner {
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .main-container {
+        padding-top: 80px;
+        margin :0 auto 80px;
+    }
+
+    .nav {
+        font-size: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0px auto 40px;
+        border-bottom: 1px solid #ccc;
+
+        .nav-item {
+            width: 360px;
+            text-align: center;
+        }
+        span {
+                color: #2c3e50;
+                font-weight: 400;
+                font-size: 26px;
+                height: 50px;
+                line-height: 50px;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: relative;
+                    height: 3px;
+                    width: 40%;
+                    margin: 0 auto;
+                    background: $accentColor;
+                    transform: scale(0);
+                    transition: all 0.3s;
+                }
+
+                &:hover::after {
+                    transform: scale(1);
+                }
+            }
+
+            .selected::after {
+                transform: scale(1);
+            }
+
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .content-item {
+            width: 360px;
+            margin: 10px 0;
+            overflow: hidden;
+
+            &:hover .img {
+                transform: scale(1.1)
+            }
+
+            .img {
+                height: 240px;
+                transition: all .3s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .text {
+                height: 188px;
+                background: #f3f3f3;
+                padding: 20px 30px;
+                text-align: left;
+                position: relative;
+
+                h3 {
+                    font-size: 20px;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                    color: #333333;
+                }
+
+                p {
+                    margin-top :10px;
+                    font-size: 14px;
+                    font-family: Microsoft YaHei UI;
+                    font-weight: 400;
+                    color: #666666;
+                    line-height: 25px;
+                }
+
+                .more {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 30px;
+                    display: block;
+                    background: #525252;
+                    font-weight: 400;
+                    padding: 2px 5px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

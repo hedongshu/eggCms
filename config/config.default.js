@@ -22,12 +22,12 @@ module.exports = appInfo => {
 
         keys: 'eggcms',
 
-        cluster: {
-            listen: {
-                port: 8080,
-                hostname: '0.0.0.0',
-            }
-        },
+        // cluster: {
+        //     listen: {
+        //         port: 8080,
+        //         hostname: '0.0.0.0',
+        //     }
+        // },
 
         session: {
             key: 'DORA_SESS',

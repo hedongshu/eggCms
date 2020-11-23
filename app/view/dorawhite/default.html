@@ -19,7 +19,7 @@
 
 <body>
     {% include "./public/header.html" %}
-    {% set className = 'marginTop' if (pageType=='index') else 'mainbody'  %}
+    {% set className = 'marginTop' if (pageType=='index') else ''  %}
     <div id="{{pageType}}" class="{{className}}">
         <input type="hidden" value="{{site.lang}}" id="siteLang">
         {% block content %}{% endblock %}

@@ -1,74 +1,78 @@
 {% extends "../default.html" %} {% block content %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 main-container" ms-controller="documentInfo">
-            <input type="hidden" value="{{post._id}}" id="contentId">
-            <div class="row articel-details">
-                <div class="col-md-8 left-frame">
-                    <div class="articel-main ">
-                        <article class="post">
-                            <h2 alt="{{site.altkey}}{{post.title}}" class="post-title">
-                                {{post.title}} {% if post.from == '2' %} &nbsp;
-                                <span class="badge">{{__('lc_document_share')}}</span>
-                                {% endif %}
-                            </h2>
-                            <ul class="post-meta content-author">
-                                <li class="author-name">
-                                    {% if post.uAuthor %} {{post.uAuthor.userName}} {% else %}
-                                    {{post.author.userName}} {% endif %}
-                                </li>
-                                <li>
-                                    {% set cateInfo = (post.categories[0]) %}
-                                    <span class="dot">&nbsp;•&nbsp;</span>
-                                    <a href="{{cateInfo.url}}"
-                                        target="_blank">{{(post.categories[post.categories.length-1]).name}}</a>
-                                </li>
-                                <li>
-                                    <span class="dot">&nbsp;•&nbsp;</span> {{post.date}}
-                                </li>
-                            </ul>
-                            <div class="post-content">
-                                {{post.comments | safe}}
-                            </div>
-                        </article>
+<div class="mainbody">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 main-container" ms-controller="documentInfo">
+                <input type="hidden" value="{{post._id}}" id="contentId">
+                <div class="row articel-details">
+                    <div class="col-md-8 left-frame">
+                        <div class="articel-main ">
+                            <article class="post">
+                                <h2 alt="{{site.altkey}}{{post.title}}" class="post-title">
+                                    {{post.title}} {% if post.from == '2' %} &nbsp;
+                                    <span class="badge">{{__('lc_document_share')}}</span>
+                                    {% endif %}
+                                </h2>
+                                <ul class="post-meta content-author">
+                                    <li class="author-name">
+                                        {% if post.uAuthor %} {{post.uAuthor.userName}} {% else %}
+                                        {{post.author.userName}} {% endif %}
+                                    </li>
+                                    <li>
+                                        {% set cateInfo = (post.categories[0]) %}
+                                        <span class="dot">&nbsp;•&nbsp;</span>
+                                        <a href="{{cateInfo.url}}"
+                                            target="_blank">{{(post.categories[post.categories.length-1]).name}}</a>
+                                    </li>
+                                    <li>
+                                        <span class="dot">&nbsp;•&nbsp;</span> {{post.date}}
+                                    </li>
+                                </ul>
+                                <div class="post-content">
+                                    {{post.comments | safe}}
+                                </div>
+                            </article>
 
-                        <div class="tag-list">
-                            <ul>
-                                {% for tag in post.tags %}
-                                <li>
-                                    <span class="label label-info">
-                                        <a href="{{tag.url}}">{{tag.name}}</a>
-                                    </span>
-                                </li>
-                                {% endfor %}
-                            </ul>
+                            <div class="tag-list">
+                                <ul>
+                                    {% for tag in post.tags %}
+                                    <li>
+                                        <span class="label label-info">
+                                            <a href="{{tag.url}}">{{tag.name}}</a>
+                                        </span>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% near_post "id"=post._id %}
+                            {% if near_post %}
+                            <div class="near-article">
+                                <ul>
+                                    {% if near_post.preContent.title %}
+                                    <li class="left">{{__('lc_pre_document')}}: <a href="{{near_post.preContent.url}}"
+                                            target="_self">{{near_post.preContent.title}}</a>
+                                    </li>
+                                    {% endif %}
+                                    {% if near_post.nextContent.title %}
+                                    <li class="right">{{__('lc_next_document')}}: <a
+                                            href="{{near_post.nextContent.url}}"
+                                            target="_self">{{near_post.nextContent.title}}</a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            {% endif %}
+                            {% include "../public/randomList.html" %}
                         </div>
-                        {% near_post "id"=post._id %}
-                        {% if near_post %}
-                        <div class="near-article">
-                            <ul>
-                                {% if near_post.preContent.title %}
-                                <li class="left">{{__('lc_pre_document')}}: <a href="{{near_post.preContent.url}}"
-                                        target="_self">{{near_post.preContent.title}}</a>
-                                </li>
-                                {% endif %}
-                                {% if near_post.nextContent.title %}
-                                <li class="right">{{__('lc_next_document')}}: <a href="{{near_post.nextContent.url}}"
-                                        target="_self">{{near_post.nextContent.title}}</a>
-                                </li>
-                                {% endif %}
-                            </ul>
-                        </div>
-                        {% endif %}
-                        {% include "../public/randomList.html" %}
                     </div>
-                </div>
-                <div class="col-md-4 right-frame">
-                    {% include "../public/cateList.html" %}
-                    {% include "../public/newItemList.html" %}
+                    <div class="col-md-4 right-frame">
+                        {% include "../public/cateList.html" %}
+                        {% include "../public/newItemList.html" %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}
